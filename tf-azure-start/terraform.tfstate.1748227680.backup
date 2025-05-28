@@ -1,0 +1,1140 @@
+{
+  "version": 4,
+  "terraform_version": "1.12.1",
+  "serial": 68,
+  "lineage": "b282782e-0edb-9452-6453-86055c1ac774",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "azurerm_client_config",
+      "name": "current",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "client_id": "c3e9f466-1eb9-46cc-b87d-a25fdb7d771a",
+            "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD1jM2U5ZjQ2Ni0xZWI5LTQ2Y2MtYjg3ZC1hMjVmZGI3ZDc3MWE7b2JqZWN0SWQ9ODNkN2EyYjQtMjg0MS00MDJhLWI0NWEtZDM3ODdkMjRjZmMwO3N1YnNjcmlwdGlvbklkPWIyMzYyNTlmLTgwOTctNGVkYS04NmUwLTYzMjVlMjUwMDViZTt0ZW5hbnRJZD1iMDlmM2YxYi1lM2Q1LTQ0ZGItYWExYS00MmYwM2RhODY2YjA=",
+            "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+            "subscription_id": "b236259f-8097-4eda-86e0-6325e25005be",
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_disk_encryption_set",
+      "name": "exampledesdvorg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "auto_key_rotation_enabled": false,
+            "encryption_type": "EncryptionAtRestWithCustomerKey",
+            "federated_client_id": "",
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.Compute/diskEncryptionSets/des",
+            "identity": [
+              {
+                "identity_ids": [],
+                "principal_id": "dcd5a9e0-5cb5-4fe1-a87b-878f41d3d1fc",
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+                "type": "SystemAssigned"
+              }
+            ],
+            "key_vault_key_id": "https://examplekeyvault3.vault.azure.net/keys/des-key1/37578185aab8442eb19855193c884364",
+            "key_vault_key_url": "https://examplekeyvault3.vault.azure.net/keys/des-key1/37578185aab8442eb19855193c884364",
+            "location": "westeurope",
+            "name": "des",
+            "resource_group_name": "rg-with-terraform",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_key_vault.example3",
+            "azurerm_key_vault_key.generated2dvorg",
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_key_vault",
+      "name": "example-dvorg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "access_policy": [
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "7ee7aecd-1ec9-4ace-afca-c2cd12c60500",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "dcd5a9e0-5cb5-4fe1-a87b-878f41d3d1fc",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              }
+            ],
+            "contact": [],
+            "enable_rbac_authorization": false,
+            "enabled_for_deployment": false,
+            "enabled_for_disk_encryption": true,
+            "enabled_for_template_deployment": false,
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault-dvorg",
+            "location": "westeurope",
+            "name": "examplekeyvault-dvorg",
+            "network_acls": [
+              {
+                "bypass": "AzureServices",
+                "default_action": "Allow",
+                "ip_rules": [],
+                "virtual_network_subnet_ids": []
+              }
+            ],
+            "public_network_access_enabled": true,
+            "purge_protection_enabled": false,
+            "resource_group_name": "rg-with-terraform",
+            "sku_name": "standard",
+            "soft_delete_retention_days": 7,
+            "tags": {},
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null,
+            "vault_uri": "https://examplekeyvault-dvorg.vault.azure.net/"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0=",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_key_vault",
+      "name": "example3",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "access_policy": [
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "7ee7aecd-1ec9-4ace-afca-c2cd12c60500",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "dcd5a9e0-5cb5-4fe1-a87b-878f41d3d1fc",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              }
+            ],
+            "contact": [],
+            "enable_rbac_authorization": false,
+            "enabled_for_deployment": false,
+            "enabled_for_disk_encryption": true,
+            "enabled_for_template_deployment": false,
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault3",
+            "location": "westeurope",
+            "name": "examplekeyvault3",
+            "network_acls": [
+              {
+                "bypass": "AzureServices",
+                "default_action": "Allow",
+                "ip_rules": [],
+                "virtual_network_subnet_ids": []
+              }
+            ],
+            "public_network_access_enabled": true,
+            "purge_protection_enabled": true,
+            "resource_group_name": "rg-with-terraform",
+            "sku_name": "standard",
+            "soft_delete_retention_days": 7,
+            "tags": {},
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null,
+            "vault_uri": "https://examplekeyvault3.vault.azure.net/"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0=",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_key_vault_key",
+      "name": "generated",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "curve": "",
+            "e": "AQAB",
+            "expiration_date": null,
+            "id": "https://examplekeyvault-dvorg.vault.azure.net/keys/des-key1/648e90048e2c4b599515c151d05a0399",
+            "key_opts": [
+              "decrypt",
+              "encrypt",
+              "sign",
+              "unwrapKey",
+              "verify",
+              "wrapKey"
+            ],
+            "key_size": 2048,
+            "key_type": "RSA",
+            "key_vault_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault-dvorg",
+            "n": "rZ5gYl34TUReoQSLFSImwViqI09nUSKEnFDc8KZ2yaZTkJKW8tfxMX_xJtMAj9Now9ZJUwho2-uc6iInqgDCJk_f8x61ST-K63nSewAPYPsPTENiIuKjHjhL0VB4YcwAL0db6vRqt65qZOqwem7TPuiPSsNZAsoUdDro-V7gOVRCvBjDAWesjeYeTEEOlj_7OGdi7mUFpJDaIxh1fcHA4EQTw3Rhpy29v7vTUbTW_By31_kYhM6wkARfgfq5LCdKuHbGIkAhq31TWM7bP52iUDPbaxXzKbIb_MDri8dhlH6Fxaq8RWd5-0Jqk916NQAR17djsmjMbFLXs0OVx3Z5hQ",
+            "name": "des-key1",
+            "not_before_date": null,
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCtnmBiXfhNRF6hBIsVIibBWKojT2dRIoScUNzwpnbJplOQkpby1/Exf/Em0wCP02jD1klTCGjb65zqIieqAMImT9/zHrVJP4rredJ7AA9g+w9MQ2Ii4qMeOEvRUHhhzAAvR1vq9Gq3rmpk6rB6btM+6I9Kw1kCyhR0Ouj5XuA5VEK8GMMBZ6yN5h5MQQ6WP/s4Z2LuZQWkkNojGHV9wcDgRBPDdGGnLb2/u9NRtNb8HLfX+RiEzrCQBF+B+rksJ0q4dsYiQCGrfVNYzts/naJQM9trFfMpshv8wOuLx2GUfoXFqrxFZ3n7QmqT3Xo1ABHXt2OyaMxsUtezQ5XHdnmF\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArZ5gYl34TUReoQSLFSIm\nwViqI09nUSKEnFDc8KZ2yaZTkJKW8tfxMX/xJtMAj9Now9ZJUwho2+uc6iInqgDC\nJk/f8x61ST+K63nSewAPYPsPTENiIuKjHjhL0VB4YcwAL0db6vRqt65qZOqwem7T\nPuiPSsNZAsoUdDro+V7gOVRCvBjDAWesjeYeTEEOlj/7OGdi7mUFpJDaIxh1fcHA\n4EQTw3Rhpy29v7vTUbTW/By31/kYhM6wkARfgfq5LCdKuHbGIkAhq31TWM7bP52i\nUDPbaxXzKbIb/MDri8dhlH6Fxaq8RWd5+0Jqk916NQAR17djsmjMbFLXs0OVx3Z5\nhQIDAQAB\n-----END PUBLIC KEY-----\n",
+            "resource_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault-dvorg/keys/des-key1/versions/648e90048e2c4b599515c151d05a0399",
+            "resource_versionless_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault-dvorg/keys/des-key1",
+            "rotation_policy": [
+              {
+                "automatic": [
+                  {
+                    "time_after_creation": "",
+                    "time_before_expiry": "P30D"
+                  }
+                ],
+                "expire_after": "P90D",
+                "notify_before_expiry": "P29D"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "version": "648e90048e2c4b599515c151d05a0399",
+            "versionless_id": "https://examplekeyvault-dvorg.vault.azure.net/keys/des-key1",
+            "x": "",
+            "y": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "azurerm_key_vault.example-dvorg",
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_key_vault_key",
+      "name": "generated2dvorg",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "curve": "",
+            "e": "AQAB",
+            "expiration_date": null,
+            "id": "https://examplekeyvault3.vault.azure.net/keys/des-key1/37578185aab8442eb19855193c884364",
+            "key_opts": [
+              "decrypt",
+              "encrypt",
+              "sign",
+              "unwrapKey",
+              "verify",
+              "wrapKey"
+            ],
+            "key_size": 2048,
+            "key_type": "RSA",
+            "key_vault_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault3",
+            "n": "qFjEhF6_TtFneCfbv8tFhLY-DLijOSQ2JLqmAmWklT71W_0sNprf6izJxjNTg9T0XKTSPqlXw7WkCMAfahXDM0oXZ7QDDzgmynbogdI-qkjml6Ul0KsxRx6tmMarT4sLp4vl8U-u8H89n8EUvzJu2RJA59_SjcPuZQ35Q4hYpvTQH8ZIrzX1llRQCROQlkTWcKNg1LcEf-zkkmm1u-85oZdfMgYznbxOpkwa8AXs1ywtw3jGr40GVZeVadgCxMHW4mZqdSPRSN3I9e9Xa5IbxCSUivchfiSWZTfTyiHgjGwYgUSY37SsBy2FH2N4Af0YUCC64O0WzLQ_8qhY8Ct0eQ",
+            "name": "des-key1",
+            "not_before_date": null,
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCoWMSEXr9O0Wd4J9u/y0WEtj4MuKM5JDYkuqYCZaSVPvVb/Sw2mt/qLMnGM1OD1PRcpNI+qVfDtaQIwB9qFcMzShdntAMPOCbKduiB0j6qSOaXpSXQqzFHHq2YxqtPiwuni+XxT67wfz2fwRS/Mm7ZEkDn39KNw+5lDflDiFim9NAfxkivNfWWVFAJE5CWRNZwo2DUtwR/7OSSabW77zmhl18yBjOdvE6mTBrwBezXLC3DeMavjQZVl5Vp2ALEwdbiZmp1I9FI3cj171drkhvEJJSK9yF+JJZlN9PKIeCMbBiBRJjftKwHLYUfY3gB/RhQILrg7RbMtD/yqFjwK3R5\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqFjEhF6/TtFneCfbv8tF\nhLY+DLijOSQ2JLqmAmWklT71W/0sNprf6izJxjNTg9T0XKTSPqlXw7WkCMAfahXD\nM0oXZ7QDDzgmynbogdI+qkjml6Ul0KsxRx6tmMarT4sLp4vl8U+u8H89n8EUvzJu\n2RJA59/SjcPuZQ35Q4hYpvTQH8ZIrzX1llRQCROQlkTWcKNg1LcEf+zkkmm1u+85\noZdfMgYznbxOpkwa8AXs1ywtw3jGr40GVZeVadgCxMHW4mZqdSPRSN3I9e9Xa5Ib\nxCSUivchfiSWZTfTyiHgjGwYgUSY37SsBy2FH2N4Af0YUCC64O0WzLQ/8qhY8Ct0\neQIDAQAB\n-----END PUBLIC KEY-----\n",
+            "resource_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault3/keys/des-key1/versions/37578185aab8442eb19855193c884364",
+            "resource_versionless_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/examplekeyvault3/keys/des-key1",
+            "rotation_policy": [
+              {
+                "automatic": [
+                  {
+                    "time_after_creation": "",
+                    "time_before_expiry": "P30D"
+                  }
+                ],
+                "expire_after": "P90D",
+                "notify_before_expiry": "P29D"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "version": "37578185aab8442eb19855193c884364",
+            "versionless_id": "https://examplekeyvault3.vault.azure.net/keys/des-key1",
+            "x": "",
+            "y": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "azurerm_key_vault.example3",
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "azurerm_resource_group",
+      "name": "rg-wtf",
+      "provider": "provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform",
+            "location": "westeurope",
+            "managed_by": "",
+            "name": "rg-with-terraform",
+            "tags": {},
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAwLCJkZWxldGUiOjU0MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjo1NDAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv1",
+      "mode": "data",
+      "type": "azurerm_client_config",
+      "name": "current",
+      "provider": "module.moduleskv1.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "client_id": "c3e9f466-1eb9-46cc-b87d-a25fdb7d771a",
+            "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD1jM2U5ZjQ2Ni0xZWI5LTQ2Y2MtYjg3ZC1hMjVmZGI3ZDc3MWE7b2JqZWN0SWQ9ODNkN2EyYjQtMjg0MS00MDJhLWI0NWEtZDM3ODdkMjRjZmMwO3N1YnNjcmlwdGlvbklkPWIyMzYyNTlmLTgwOTctNGVkYS04NmUwLTYzMjVlMjUwMDViZTt0ZW5hbnRJZD1iMDlmM2YxYi1lM2Q1LTQ0ZGItYWExYS00MmYwM2RhODY2YjA=",
+            "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+            "subscription_id": "b236259f-8097-4eda-86e0-6325e25005be",
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv1",
+      "mode": "managed",
+      "type": "azurerm_key_vault",
+      "name": "kvdvorg",
+      "provider": "module.moduleskv1.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "access_policy": [
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "7ee7aecd-1ec9-4ace-afca-c2cd12c60500",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              }
+            ],
+            "contact": [],
+            "enable_rbac_authorization": false,
+            "enabled_for_deployment": false,
+            "enabled_for_disk_encryption": true,
+            "enabled_for_template_deployment": false,
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/firstkvdvorg",
+            "location": "westeurope",
+            "name": "firstkvdvorg",
+            "network_acls": [
+              {
+                "bypass": "AzureServices",
+                "default_action": "Allow",
+                "ip_rules": [],
+                "virtual_network_subnet_ids": []
+              }
+            ],
+            "public_network_access_enabled": true,
+            "purge_protection_enabled": false,
+            "resource_group_name": "rg-with-terraform",
+            "sku_name": "standard",
+            "soft_delete_retention_days": 7,
+            "tags": {},
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null,
+            "vault_uri": "https://firstkvdvorg.vault.azure.net/"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0=",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current",
+            "module.moduleskv1.data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv1",
+      "mode": "managed",
+      "type": "azurerm_key_vault_key",
+      "name": "generated",
+      "provider": "module.moduleskv1.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "curve": "",
+            "e": "AQAB",
+            "expiration_date": null,
+            "id": "https://firstkvdvorg.vault.azure.net/keys/des-key1/5e18c9a74b384ee4b8ab6ad6f79184be",
+            "key_opts": [
+              "decrypt",
+              "encrypt",
+              "sign",
+              "unwrapKey",
+              "verify",
+              "wrapKey"
+            ],
+            "key_size": 2048,
+            "key_type": "RSA",
+            "key_vault_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/firstkvdvorg",
+            "n": "utUgutnznarNURW0Q28SjFih94Z359IRAcxlaQNLGMsQVOewvqJsIlFwsNS3KZKjngheenyeZmRJ-7u0VAgIGGpJqiZFryF1qEot20eWB5_J7q9o2e5VxeAzvT9Qq2x01VZp3NZF5L99hnn5SdqGw19sZMOYhgZieal7S_WC06p5Rkj1Raqo8yYLoV6_5mddju4KLtVf308EVuR-Y90S1u4Sao70WwSm1BSuw_NhJZDHGmEoFC07BXIrVVukFY-q2-KIC8NxHZlSlvcB2UiimuNemQGScZwBjCkuVY2Gr4RcDVOP1jgGb98QqDj-dnkMenlMf2L8PxclY8d8ubTuCQ",
+            "name": "des-key1",
+            "not_before_date": null,
+            "public_key_openssh": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC61SC62fOdqs1RFbRDbxKMWKH3hnfn0hEBzGVpA0sYyxBU57C+omwiUXCw1LcpkqOeCF56fJ5mZEn7u7RUCAgYakmqJkWvIXWoSi3bR5YHn8nur2jZ7lXF4DO9P1CrbHTVVmnc1kXkv32GeflJ2obDX2xkw5iGBmJ5qXtL9YLTqnlGSPVFqqjzJguhXr/mZ12O7gou1V/fTwRW5H5j3RLW7hJqjvRbBKbUFK7D82ElkMcaYSgULTsFcitVW6QVj6rb4ogLw3EdmVKW9wHZSKKa416ZAZJxnAGMKS5VjYavhFwNU4/WOAZv3xCoOP52eQx6eUx/Yvw/FyVjx3y5tO4J\n",
+            "public_key_pem": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAutUgutnznarNURW0Q28S\njFih94Z359IRAcxlaQNLGMsQVOewvqJsIlFwsNS3KZKjngheenyeZmRJ+7u0VAgI\nGGpJqiZFryF1qEot20eWB5/J7q9o2e5VxeAzvT9Qq2x01VZp3NZF5L99hnn5SdqG\nw19sZMOYhgZieal7S/WC06p5Rkj1Raqo8yYLoV6/5mddju4KLtVf308EVuR+Y90S\n1u4Sao70WwSm1BSuw/NhJZDHGmEoFC07BXIrVVukFY+q2+KIC8NxHZlSlvcB2Uii\nmuNemQGScZwBjCkuVY2Gr4RcDVOP1jgGb98QqDj+dnkMenlMf2L8PxclY8d8ubTu\nCQIDAQAB\n-----END PUBLIC KEY-----\n",
+            "resource_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/firstkvdvorg/keys/des-key1/versions/5e18c9a74b384ee4b8ab6ad6f79184be",
+            "resource_versionless_id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/firstkvdvorg/keys/des-key1",
+            "rotation_policy": [
+              {
+                "automatic": [
+                  {
+                    "time_after_creation": "",
+                    "time_before_expiry": "P30D"
+                  }
+                ],
+                "expire_after": "P90D",
+                "notify_before_expiry": "P29D"
+              }
+            ],
+            "tags": {},
+            "timeouts": null,
+            "version": "5e18c9a74b384ee4b8ab6ad6f79184be",
+            "versionless_id": "https://firstkvdvorg.vault.azure.net/keys/des-key1",
+            "x": "",
+            "y": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current",
+            "module.moduleskv1.azurerm_key_vault.kvdvorg",
+            "module.moduleskv1.data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv2",
+      "mode": "data",
+      "type": "azurerm_client_config",
+      "name": "current",
+      "provider": "module.moduleskv2.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "client_id": "c3e9f466-1eb9-46cc-b87d-a25fdb7d771a",
+            "id": "Y2xpZW50Q29uZmlncy9jbGllbnRJZD1jM2U5ZjQ2Ni0xZWI5LTQ2Y2MtYjg3ZC1hMjVmZGI3ZDc3MWE7b2JqZWN0SWQ9ODNkN2EyYjQtMjg0MS00MDJhLWI0NWEtZDM3ODdkMjRjZmMwO3N1YnNjcmlwdGlvbklkPWIyMzYyNTlmLTgwOTctNGVkYS04NmUwLTYzMjVlMjUwMDViZTt0ZW5hbnRJZD1iMDlmM2YxYi1lM2Q1LTQ0ZGItYWExYS00MmYwM2RhODY2YjA=",
+            "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+            "subscription_id": "b236259f-8097-4eda-86e0-6325e25005be",
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv2",
+      "mode": "managed",
+      "type": "azurerm_disk_encryption_set",
+      "name": "desdvorg",
+      "provider": "module.moduleskv1.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "auto_key_rotation_enabled": false,
+            "encryption_type": "EncryptionAtRestWithCustomerKey",
+            "federated_client_id": "",
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.Compute/diskEncryptionSets/des-firstkvdvorg",
+            "identity": [
+              {
+                "identity_ids": null,
+                "principal_id": "910f2c66-5204-48b3-95f5-e2d48664839b",
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+                "type": "SystemAssigned"
+              }
+            ],
+            "key_vault_key_id": "https://firstkvdvorg.vault.azure.net/keys/des-key1/5e18c9a74b384ee4b8ab6ad6f79184be",
+            "key_vault_key_url": "https://firstkvdvorg.vault.azure.net/keys/des-key1/5e18c9a74b384ee4b8ab6ad6f79184be",
+            "location": "westeurope",
+            "name": "des-firstkvdvorg",
+            "resource_group_name": "rg-with-terraform",
+            "tags": null,
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjozNjAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current",
+            "module.moduleskv1.azurerm_key_vault.kvdvorg",
+            "module.moduleskv1.azurerm_key_vault_key.generated",
+            "module.moduleskv1.data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.moduleskv2",
+      "mode": "managed",
+      "type": "azurerm_key_vault",
+      "name": "kvdvorg",
+      "provider": "module.moduleskv2.provider[\"registry.terraform.io/hashicorp/azurerm\"]",
+      "instances": [
+        {
+          "schema_version": 2,
+          "attributes": {
+            "access_policy": [
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "83d7a2b4-2841-402a-b45a-d3787d24cfc0",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              },
+              {
+                "application_id": "",
+                "certificate_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "ManageContacts",
+                  "ManageIssuers",
+                  "GetIssuers",
+                  "ListIssuers",
+                  "SetIssuers",
+                  "DeleteIssuers",
+                  "Purge"
+                ],
+                "key_permissions": [
+                  "Get",
+                  "List",
+                  "Update",
+                  "Create",
+                  "Import",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "GetRotationPolicy",
+                  "SetRotationPolicy",
+                  "Rotate",
+                  "Encrypt",
+                  "Decrypt",
+                  "UnwrapKey",
+                  "WrapKey",
+                  "Verify",
+                  "Sign",
+                  "Purge",
+                  "Release"
+                ],
+                "object_id": "7ee7aecd-1ec9-4ace-afca-c2cd12c60500",
+                "secret_permissions": [
+                  "Get",
+                  "List",
+                  "Set",
+                  "Delete",
+                  "Recover",
+                  "Backup",
+                  "Restore",
+                  "Purge"
+                ],
+                "storage_permissions": [
+                  "Get"
+                ],
+                "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0"
+              }
+            ],
+            "contact": [],
+            "enable_rbac_authorization": false,
+            "enabled_for_deployment": false,
+            "enabled_for_disk_encryption": true,
+            "enabled_for_template_deployment": false,
+            "id": "/subscriptions/b236259f-8097-4eda-86e0-6325e25005be/resourceGroups/rg-with-terraform/providers/Microsoft.KeyVault/vaults/secondkvdvorg",
+            "location": "westeurope",
+            "name": "secondkvdvorg",
+            "network_acls": [
+              {
+                "bypass": "AzureServices",
+                "default_action": "Allow",
+                "ip_rules": [],
+                "virtual_network_subnet_ids": []
+              }
+            ],
+            "public_network_access_enabled": true,
+            "purge_protection_enabled": false,
+            "resource_group_name": "rg-with-terraform",
+            "sku_name": "standard",
+            "soft_delete_retention_days": 7,
+            "tags": {},
+            "tenant_id": "b09f3f1b-e3d5-44db-aa1a-42f03da866b0",
+            "timeouts": null,
+            "vault_uri": "https://secondkvdvorg.vault.azure.net/"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInJlYWQiOjMwMDAwMDAwMDAwMCwidXBkYXRlIjoxODAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIyIn0=",
+          "dependencies": [
+            "azurerm_resource_group.rg-wtf",
+            "data.azurerm_client_config.current",
+            "module.moduleskv2.data.azurerm_client_config.current"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
