@@ -1,2 +1,4 @@
 ./moduleskv/.terraform/*
 ./tf-azure-start/.terraform/*
+./terraform.tfstate*
+./plan
